@@ -1,6 +1,6 @@
-# Lykke.Service template #
+# MAVN.Service template #
 
-dotnet cli template for generating a solution for the service Lykke.Service.ServiceName and/or job Lykke.Job.JobName
+dotnet cli template for generating a solution for the service MAVN.Service.ServiceName and/or job MAVN.Job.JobName
 
 ## How to use? ##
 
@@ -15,27 +15,27 @@ where `${path}` is the **full** path to the clonned directory (where folder .tem
 Now new template can be used in dotnet cli:
 to generate new service:
 ```sh
-dotnet new lkebizservice -n ${ServiceName} -o Lykke.Service.${ServiceName} [-az {true|false} -rpub {true|false} -rsub {true|false} -t {true|false} -atdb {true|false} -msdb {true|false}]
+dotnet new mavnservice -n ${ServiceName} -o MAVN.Service.${ServiceName} [-az {true|false} -rpub {true|false} -rsub {true|false} -t {true|false} -atdb {true|false} -msdb {true|false}]
 ```
 
 to generate solution with only the job projects:
 ```sh
-dotnet new lkebizservice -type Job -n ${JobName} -o Lykke.Job.${JobName} [-az {true|false} -rpub {true|false} -rsub {true|false} -t {true|false} -atdb {true|false} -msdb {true|false}]
+dotnet new mavnservice -type Job -n ${JobName} -o MAVN.Job.${JobName} [-az {true|false} -rpub {true|false} -rsub {true|false} -t {true|false} -atdb {true|false} -msdb {true|false}]
 ```
 
 to generate solution with service and job projects:
 ```sh
-dotnet new lkebizservice -type ServiceJob -n ${ServiceName} -o Lykke.Service.${ServiceName} [-az {true|false} -rpub {true|false} -rsub {true|false} -t {true|false} -atdb {true|false} -msdb {true|false}]
+dotnet new mavnservice -type ServiceJob -n ${ServiceName} -o MAVN.Service.${ServiceName} [-az {true|false} -rpub {true|false} -rsub {true|false} -t {true|false} -atdb {true|false} -msdb {true|false}]
 ```
 
-This will create a solution in the current folder, where `${ServiceName}` or `${JobName}` is the service/job name without Lykke.Service./Lykke.Job. prefix. Switches:
+This will create a solution in the current folder, where `${ServiceName}` or `${JobName}` is the service/job name without MAVN.Service./MAVN.Job. prefix. Switches:
 
 -   **-n|--name**: Service/Job name
 -   **-o|--output**: Output directory name
--   **-type**: Type of the project. Available values: 
-Service - will create a solution named Lykke.Service.{ServiceName} containing service, client and service contracts.
-ServiceJob - will create a solution named Lykke.Service.{ServiceName} containing service, client, job, service and job contracts.
-Job - will create a solution named Lykke.Job.{JobName} containing only job related projects (no client, service contracts, and service host). 
+-   **-type**: Type of the project. Available values:
+Service - will create a solution named MAVN.Service.{ServiceName} containing service, client and service contracts.
+ServiceJob - will create a solution named MAVN.Service.{ServiceName} containing service, client, job, service and job contracts.
+Job - will create a solution named MAVN.Job.{JobName} containing only job related projects (no client, service contracts, and service host). 
 Default is **Service**
 -   **-az|--azurequeuesub**: Enables incoming Azure Queue messages processing, using Lykke.JobTriggers package. Default is  **false**
 -   **-rsub|--rabbitsub**: Enables incoming RabbitMQ messages processing. Default is  **false**
