@@ -8,7 +8,7 @@
   "tags": {
     "language": "C#"
   },
-  "sourceName": "MAVNService",
+  "sourceName": "LykkeService",
   "symbols": {
     "serviceType": {
       "type": "parameter",
