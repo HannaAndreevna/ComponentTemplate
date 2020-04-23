@@ -147,6 +147,17 @@
           }
         }
       ]
+    },
+    "*.yml" : {
+      "Operations": [
+        {
+          "type": "conditional",
+          "configuration": {
+            "style": "line",
+            "token": "#"
+          }
+        }
+      ]
     }
   },
   "sources": [
