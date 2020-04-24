@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "LykkeService job local settings": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SettingsUrl": "token_to_settings",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+      }
+    }
+  }
+}
